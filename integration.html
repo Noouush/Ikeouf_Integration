@@ -10,26 +10,36 @@
 </head>
 
 <body>
-    <!-- Header : nav + search bar -->
+    <!-- Navbar -->
     <header>
         <nav>
             <div class="menu"><img src="assets/Logo.png" alt="logo ikeouf"></div>
-            <div class="menu"><p>HOME</p></div>
-            <div class="menu"><p>SHOP</p></div>
-            <div class="menu2"><p>MAGAZINE</p></div>
+            <div class="menu">
+                <p>HOME</p>
+            </div>
+            <div class="menu">
+                <p>SHOP</p>
+            </div>
+            <div class="menu2">
+                <p>MAGAZINE</p>
+            </div>
             <div class="menu"><img src="assets/Cart Button.png" alt="show my cart"></div>
-            <div class="menu"><p>LOGIN</p></div>
+            <div class="menu">
+                <p>LOGIN</p>
+            </div>
         </nav>
     </header>
 
-    <!-- Main Content : Search and filter, products -->
-    <main>
+    
         <!-- Search bar -->
-        <img class= "searchpic" src="assets/Search.png" alt="search whatever you want here" width="40px" height="40px">
+    <div class="searchbar">
+        <img class="searchpic" src="assets/Search.png" alt="search whatever you want here" width="40px" height="40px">
         <div class="search">
             <input placeholder="living room" size="50%" />
-            <span class="algolia">Powered by <b>Algolia</b> <img src="assets/Sajari Logo.png" alt="Logo from sajari"></span>
+            <span class="algolia">Powered by <b>Algolia</b> <img src="assets/Sajari Logo.png"
+                    alt="Logo from sajari"></span>
         </div>
+        
         <!-- Order by -->
         <div class="orderby">
             <button class="dropbtn">Best match <span id="arrow"><i class="arrow down"></i></span></button>
@@ -38,6 +48,43 @@
                 <a href="#">Higher price</a>
                 <a href="#">Best rated</a>
             </div>
+        </div>
+    </div>
+
+        <!-- Main Content : Filter, products -->
+
+        <main>
+        <!-- Filter box -->
+        <div class="filterbox">
+            <p>FILTER BY</p>
+            <button class="dropdown-btn">Collection <span id="arrow"><i class="arrow down"></i></span></button>
+              <div class="dropdown-container">
+                <a href="#">Summer 2021</a>
+                <a href="#">Sales</a>
+                <a href="#">Beach House</a>
+                <a href="#">Cottage Living</a>
+              </div>
+
+            <button class="dropdown-btn">Color <span id="arrow"><i class="arrow down"></i></span></button>
+              <div class="dropdown-container">
+                <a href="#">Black</a>
+                <a href="#">White</a>
+                <a href="#">Beige</a>
+                <a href="#">Bordeaux</a>
+                <a href="#">Navy Blue</a>
+              </div>
+            
+            <button class="dropdown-btn">Category <span id="arrow"><i class="arrow down"></i></span></button>
+              <div class="dropdown-container">
+                <a href="#">Lounge</a>
+                <a href="#">Table & chairs</a>
+                <a href="#">Armchair</a>
+                <a href="#">Side Table</a>
+                <a href="#">Shelves</a>
+                <a href="#">Chair</a>
+              </div>
+
+            
         </div>
     </main>
 
