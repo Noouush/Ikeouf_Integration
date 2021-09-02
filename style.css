@@ -1,0 +1,143 @@
+/* FONT IMPORT AND SET */
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('assets/fonts/Roboto-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'AvenirLTStd-Roman';
+    src: url('assets/fonts/AvenirLTStd-Roman.ttf') format("truetype");
+}
+
+/* BODY */
+body {
+    margin: 0px 60px;
+}
+
+/* HEADER */
+nav {
+    display              : grid;
+    grid-template-columns: repeat(4, 1fr) 10fr repeat(2, 1fr);
+}
+
+.menu {
+    place-self: center;
+    font-family: 'Roboto-Regular';
+    font-weight: 700;
+}
+
+.menu2 {
+    grid-column: 4 / 6;
+    align-self: center;
+    padding-left: 20px;
+    font-family: 'Roboto-Regular';
+    font-weight: 700;
+}
+
+/* MAIN */
+main {
+    display              : grid;
+    /*
+    template areas doesn't work ! (invalid value on Firefox)
+    grid-template-areas  : "a a a b"
+                           "c d d d"
+                           "d d d d";*/
+    grid-template-columns: 80px repeat(4, 1fr);
+    grid-template-rows   : repeat(3, auto);
+    margin: 30px 0px;
+}
+
+/* Search Bar */
+.search {
+    /*grid-area: a;*/
+    grid-column: 2 / span 3;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: 3px solid;
+    justify-self: stretch;
+}
+
+.searchpic {
+    grid-column: 1 / 2;
+    place-self: center;
+}
+
+input {
+    font-family: 'AvenirLTStd-Roman';
+    font-size: 1.7em;
+    font-weight: bold;
+    border: none;
+}
+
+.algolia {
+    font-family: 'Roboto-Regular';
+    color: black;
+    text-align: right;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+/* Order By */
+.orderby {
+    /* grid-area: b; */
+    grid-column: 5 / 6;
+    align-self: center;
+    position : relative;
+    justify-self: stretch;
+}
+
+.dropbtn {
+    font-family: 'AvenirLTStd-Roman';
+    font-size: 1.3em;
+    background-color: white;
+    color           : black;
+    padding         : 16px;
+    margin-left: 20px;
+    border          : none;
+    border-bottom: lightgrey solid 3px;
+}
+
+.dropdown-content {
+    display         : none;
+    position        : absolute;
+    background-color: #f1f1f1;
+    min-width       : 160px;
+    box-shadow      : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index         : 1;
+}
+
+.dropdown-content a {
+    color          : black;
+    padding        : 12px 16px;
+    text-decoration: none;
+    display        : block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.orderby:hover .dropdown-content {
+    display: block;
+}
+
+.orderby:hover .dropbtn {
+    background-color: white;
+}
+
+#arrow {
+    padding-left: 100px;
+}
+
+.arrow {
+    border      : solid black;
+    border-width: 0 3px 3px 0;
+    display     : inline-block;
+    padding     : 5px;
+}
+
+.down {
+    transform        : rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
