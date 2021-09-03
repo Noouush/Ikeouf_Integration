@@ -1,263 +1,284 @@
 /* FONT IMPORT AND SET */
 @font-face {
-    font-family: 'Roboto-Regular';
-    src        : url('assets/fonts/Roboto-Regular.ttf') format("truetype");
+  font-family: "Roboto-Regular";
+  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'AvenirLTStd-Roman';
-    src        : url('assets/fonts/AvenirLTStd-Roman.ttf') format("truetype");
+  font-family: "AvenirLTStd-Roman";
+  src: url("assets/fonts/AvenirLTStd-Roman.ttf") format("truetype");
 }
 
 /* BODY */
 body {
-    margin: 0px 60px;
+  margin: 0px 60px;
 }
 
 /* HEADER */
 nav {
-    display              : grid;
-    grid-template-columns: repeat(4, 1fr) 10fr repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 10fr repeat(2, 1fr);
 }
 
 .menu {
-    place-self : center;
-    font-family: 'Roboto-Regular';
-    font-weight: 700;
+  place-self: center;
+  font-family: "Roboto-Regular";
+  font-weight: 700;
 }
 
 .menu2 {
-    grid-column : 4 / 6;
-    align-self  : center;
-    padding-left: 20px;
-    font-family : 'Roboto-Regular';
-    font-weight : 700;
+  grid-column: 4 / 6;
+  align-self: center;
+  padding-left: 20px;
+  font-family: "Roboto-Regular";
+  font-weight: 700;
 }
 
 /* SEARCH BAR */
 .searchbar {
-    display              : grid;
-    grid-template-columns: 70px repeat(4, 1fr);
-    margin               : 30px 0px;
+  display: grid;
+  grid-template-columns: 70px repeat(4, 1fr);
+  margin: 30px 0px;
 }
 
 .searchpic {
-    grid-column: 1 / 2;
-    place-self : center;
+  grid-column: 1 / 2;
+  place-self: center;
 }
 
 .search {
-    grid-column  : 2 / span 3;
-    justify-self : stretch;
-    border-top   : transparent;
-    border-left  : transparent;
-    border-right : transparent;
-    border-bottom: 3px solid;
+  grid-column: 2 / span 3;
+  justify-self: stretch;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  border-bottom: 3px solid;
 }
 
 input {
-    font-family: 'AvenirLTStd-Roman';
-    font-size  : 1.7em;
-    font-weight: bold;
-    border     : none;
-    width      : 80%;
+  font-family: "AvenirLTStd-Roman";
+  font-size: 1.7em;
+  font-weight: bold;
+  border: none;
+  width: 80%;
 }
 
 .algolia {
-    font-family: 'Roboto-Regular';
-    color      : black;
-    text-align : right;
-    font-weight: 300;
-    font-size  : 0.8em;
+  font-family: "Roboto-Regular";
+  color: black;
+  text-align: right;
+  font-weight: 300;
+  font-size: 0.8em;
 }
 
 /* Order By */
 .orderby {
-    /* grid-area: b; */
-    grid-column : 5 / 6;
-    align-self  : center;
-    position    : relative;
-    justify-self: stretch;
+  /* grid-area: b; */
+  grid-column: 5 / 6;
+  align-self: center;
+  position: relative;
+  justify-self: stretch;
 }
 
 .dropbtn {
-    font-family     : 'AvenirLTStd-Roman';
-    font-size       : 1.3em;
-    background-color: white;
-    color           : black;
-    padding         : 16px;
-    margin-left     : 20px;
-    border          : none;
-    border-bottom   : lightgrey solid 3px;
+  font-family: "AvenirLTStd-Roman";
+  font-size: 1.3em;
+  background-color: white;
+  color: black;
+  padding: 16px;
+  margin-left: 20px;
+  border: none;
+  border-bottom: lightgrey solid 3px;
 }
 
 .dropdown-content {
-    display         : none;
-    position        : absolute;
-    background-color: #f1f1f1;
-    min-width       : 160px;
-    box-shadow      : 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index         : 1;
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content a {
-    font-family    : 'Roboto-Regular';
-    color          : black;
-    padding        : 12px 16px;
-    text-decoration: none;
-    display        : block;
+  font-family: "Roboto-Regular";
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .orderby:hover .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .orderby:hover .dropbtn {
-    background-color: white;
+  background-color: white;
 }
 
 #arrow {
-    padding-left: 100px;
+  padding-left: 100px;
 }
 
 .arrow {
-    border      : solid black;
-    border-width: 0 3px 3px 0;
-    display     : inline-block;
-    padding     : 5px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
 }
 
 .down {
-    transform        : rotate(45deg);
-    -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 /* MAIN */
 main {
-    display              : grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows   : repeat(2, auto);
-    column-gap: 25px;
-    row-gap: 40px;
-    margin               : 30px 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  column-gap: 25px;
+  row-gap: 40px;
+  margin: 30px 0px;
 }
 
 /* Filter box */
 
-.filterbox>p {
-    font-family: 'AvenirLTStd-Roman';
-    font-size  : 0.8em;
-    color      : lightgrey;
+.filterbox > p {
+  font-family: "AvenirLTStd-Roman";
+  font-size: 0.8em;
+  color: lightgrey;
 }
 
 .dropdown-btn {
-    padding        : 15px 0px 15px 20px;
-    text-decoration: none;
-    font-family    : 'AvenirLTStd-Roman';
-    font-size      : 1.1em;
-    color          : black;
-    display        : block;
-    border         : none;
-    border-bottom  : lightgrey solid 1.5px;
-    background     : none;
-    width          : 100%;
-    text-align     : left;
-    cursor         : pointer;
-    outline        : none;
+  padding: 15px 0px 15px 20px;
+  text-decoration: none;
+  font-family: "AvenirLTStd-Roman";
+  font-size: 1.1em;
+  color: black;
+  display: block;
+  border: none;
+  border-bottom: lightgrey solid 1.5px;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
-
 
 .dropdown-container {
-    display         : none;
-    padding-left: 30px;
+  display: none;
+  padding-left: 30px;
 }
 
-.dropdown-container>p {
-    font-family: 'Roboto-Regular';
-
+.dropdown-container > p {
+  font-family: "Roboto-Regular";
 }
 
 /* Price Range */
-.pricerange>p {
-    font-family: 'AvenirLTStd-Roman';
-    font-size  : 1.1em;
-    color      : black;
-    padding-left: 20px;
+.pricerange > p {
+  font-family: "AvenirLTStd-Roman";
+  font-size: 1.1em;
+  color: black;
+  padding-left: 20px;
 }
 
 #amount {
-    color: black;
-    border: none;
-    font-size: 0.9em;
-    padding-top: 40px;
+  color: black;
+  border: none;
+  font-size: 0.9em;
+  padding-top: 40px;
 }
 
 #slider-range.ui-slider-horizontal {
-    top: 1em;
-    left: 5%;
-    height: .1em;
-    width: 90%;
-    border: none;
-    background: #ccc;
-  }
+  top: 1em;
+  left: 5%;
+  height: 0.1em;
+  width: 90%;
+  border: none;
+  background: #ccc;
+}
 
 #slider-range .ui-slider-handle {
-    outline: 0;
-    background: white;
-    border: black solid 2px;
-    border-radius: 50%;
-    top: -.6em;
-  }
-
+  outline: 0;
+  background: white;
+  border: black solid 2px;
+  border-radius: 50%;
+  top: -0.6em;
+}
 
 /* Products */
 
 .products {
-    display: grid;
-    grid-template-columns: 50px repeat(2, 1fr) 50px;
-    grid-template-rows: repeat(3, auto);
-    font-family: 'AvenirLTStd-Roman';
+  display: grid;
+  grid-template-columns: 50px repeat(2, 1fr) 50px;
+  grid-template-rows: repeat(3, auto);
+  font-family: "AvenirLTStd-Roman";
 }
 
 .pimg {
-    justify-self: center;
-    grid-column: 1 / span 4;
+  justify-self: center;
+  grid-column: 1 / span 4;
 }
 
 .pname {
-    grid-column: 2 / span 1;
-    padding: 10px 0px 5px 0px;
-    font-weight: 700;
+  grid-column: 2 / span 1;
+  padding: 10px 0px 5px 0px;
+  font-weight: 700;
 }
 
 .pprice {
-    grid-column: 3 / span 1;
-    justify-self: end;
-    padding: 10px 0px 5px 0px;
-    font-size: 1.2em;
-    font-weight: 200;
+  grid-column: 3 / span 1;
+  justify-self: end;
+  padding: 10px 0px 5px 0px;
+  font-size: 1.2em;
+  font-weight: 200;
 }
 
 .pcategory {
-    grid-column: 2 / span 1;
-    padding: 5px 0px 5px 0px;
-    color: grey;
-    font-weight: 100;
-    font-size: 0.8em;
-    
+  grid-column: 2 / span 1;
+  padding: 5px 0px 5px 0px;
+  color: grey;
+  font-weight: 100;
+  font-size: 0.8em;
 }
 
 .addtocart {
-    grid-column: 3 / span 1;
-    justify-self: end;
-    padding-top: 10px;
-    grid-row: 3 / span 2;
+  grid-column: 3 / span 1;
+  justify-self: end;
+  padding-top: 10px;
+  grid-row: 3 / span 2;
 }
 
 .prate {
-    grid-column: 2 / span 1;
+  grid-column: 2 / span 1;
+}
+
+/* Footer */
+
+.pagination {
+  display: inline-block;
+  margin: 40px 0px;
+}
+
+.pagination a {
+  color: black;
+  font-family: 'AvenirLTStd-Roman';
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0px 15px;
+}
+
+.pagination a.active {
+  background-color: black;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
 }
