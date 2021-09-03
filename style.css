@@ -220,6 +220,13 @@ main {
   font-family: "AvenirLTStd-Roman";
 }
 
+.products2 {
+    display: grid;
+    grid-template-columns: 50px repeat(2, 1fr) 50px;
+    grid-template-rows: repeat(3, auto);
+    font-family: "AvenirLTStd-Roman";
+  }
+
 .pimg {
   justify-self: center;
   grid-column: 1 / span 4;
@@ -281,4 +288,35 @@ main {
 
 .pagination a:hover:not(.active) {
   background-color: #ddd;
+}
+
+/* Media queries for responsive */
+
+@media screen and (max-width: 768px) { 
+
+    .products2 {
+        display: none;
+      }
+
+    .pagination2 {
+        display: none;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .algolia {
+        display: none;
+    }
+
+    .searchbar {
+        display: flex;
+    }
+
+    .orderby {
+        flex-direction: column;
+    }
+
 }
