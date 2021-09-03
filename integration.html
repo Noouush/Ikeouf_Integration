@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=stylesheet href=style.css>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Welcome to Ikeouf, best furniture shop in the world</title>
 </head>
 
@@ -84,6 +88,13 @@
                 <p>• Chair</lp>
             </div>
 
+            <!-- Price Range (in the filter box div)-->
+            <div class="pricerange">
+                <p>Price Range</p>
+                <div id="slider-range"></div>
+                <input type="text" id="amount" readonly>
+            </div>
+
 
             <script>
                 /* Js for the drop down */
@@ -101,9 +112,125 @@
                         }
                     });
                 }
+
+                /* jQuery for the price range - Obsolete, but the exercice was to use the less js possible */
+                $(function () {
+                    $("#slider-range").slider({
+                        range: true,
+                        min: 0,
+                        max: 10000,
+                        values: [0, 10000],
+                        slide: function (event, ui) {
+                            $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                        }
+                    });
+                    $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                        " - $" + $("#slider-range").slider("values", 1));
+                });
             </script>
+        </div>
 
-
+        <!-- Products -->
+        <div class="products">
+            <img class="pimg" src="assets/deanna-alys-5Zg8QJpBU-8-unsplash.jpg" height="350px" width="350px" alt="">
+            <div class="pname">Coombes</div>
+            <div class="pprice">$ 120</div>
+            <div class="pcategory">CHAIR</div>
+            <img class="addtocart" src="assets/Add to cart.png" alt="click here to add to your cart" height="25px"
+                width="25px">
+            <div class="prate">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star.png" height="12px" width="12px" alt="">
+                <img src="assets/Star.png" height="12px" width="12px" alt=""></div>
+        </div>
+        <div class="products">
+            <img class="pimg" src="assets/inside-weather-Ijk3UP9uRhk-unsplash.jpg" height="350px" width="350px" alt="">
+            <div class="pname">Blanko</div>
+            <div class="pprice">$ 1320</div>
+            <div class="pcategory">LOUNGE</div>
+            <img class="addtocart" src="assets/Add to cart.png" alt="click here to add to your cart" height="25px"
+                width="25px">
+            <div class="prate">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt=""></div>
+        </div>
+        <div class="products">
+            <img class="pimg" src="assets/nathan-oakley-kfIN3cGA5xE-unsplash.jpg" height="350px" width="350px" alt="">
+            <div class="pname">Momo</div>
+            <div class="pprice">$ 2600</div>
+            <div class="pcategory">BED</div>
+            <img class="addtocart" src="assets/Add to cart.png" alt="click here to add to your cart" height="25px"
+                width="25px">
+            <div class="prate">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star.png" height="12px" width="12px" alt=""></div>
+        </div>
+        <div class="products">
+            <img class="pimg" src="assets/nathan-oakley-km5V1ejfWsc-unsplash.jpg" height="350px" width="350px" alt="">
+            <div class="pname">Keeve Set</div>
+            <div class="pprice">$ 950</div>
+            <div class="pcategory">TABLE & CHAIR</div>
+            <img class="addtocart" src="assets/Add to cart.png" alt="click here to add to your cart" height="25px"
+                width="25px">
+            <div class="prate"
+            <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+            <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+            <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+            <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+            <img src="assets/Star - On.png" height="12px" width="12px" alt=""></div>
+        </div>
+        <div class="products">
+            <img class="pimg" src="assets/natural-goods-berlin-KhUIvD_z3Hw-unsplash.jpg" height="350px" width="350px"
+                alt="">
+            <div class="pname">Nillè</div>
+            <div class="pprice">$ 890</div>
+            <div class="pcategory">TABLE</div>
+            <img class="addtocart" src="assets/Add to cart.png" alt="click here to add to your cart" height="25px"
+                width="25px">
+            <div class="prate">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star.png" height="12px" width="12px" alt="">
+                <img src="assets/Star.png" height="12px" width="12px" alt=""></div>
+        </div>
+        <div class="products">
+            <img class="pimg" src="assets/natural-goods-berlin-L6NP4ZGnpSY-unsplash.jpg" height="350px" width="350px"
+                alt="">
+            <div class="pname">Penemillè</div>
+            <div class="pprice">$ 90</div>
+            <div class="pcategory">SHELVES</div>
+            <img class="addtocart" src="assets/Add to cart.png" alt="click here to add to your cart" height="25px"
+                width="25px">
+            <div class="prate">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star.png" height="12px" width="12px" alt="">
+                <img src="assets/Star.png" height="12px" width="12px" alt=""></div>
+        </div>
+        <div class="products">
+            <img class="pimg" src="assets/spacejoy-sh6Aj176NAQ-unsplash.jpg" height="350px" width="350px" alt="">
+            <div class="pname">Kappu</div>
+            <div class="pprice">$ 460</div>
+            <div class="pcategory">STORAGE</div>
+            <img class="addtocart" src="assets/Add to cart.png" alt="click here to add to your cart" height="25px"
+                width="25px">
+            <div class="prate">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star - On.png" height="12px" width="12px" alt="">
+                <img src="assets/Star.png" height="12px" width="12px" alt="">
+            </div>
         </div>
     </main>
 
