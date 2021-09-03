@@ -60,6 +60,7 @@ input {
     font-size  : 1.7em;
     font-weight: bold;
     border     : none;
+    width      : 80%;
 }
 
 .algolia {
@@ -139,8 +140,41 @@ input {
 main {
     display              : grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows   : repeat(2, auto);
     margin               : 30px 0px;
 }
 
 /* Filter box */
+
+.filterbox>p {
+    font-family: 'AvenirLTStd-Roman';
+    font-size  : 0.8em;
+    color      : lightgrey;
+}
+
+.dropdown-btn {
+    padding        : 15px 0px 15px 20px;
+    text-decoration: none;
+    font-family    : 'AvenirLTStd-Roman';
+    font-size      : 1.1em;
+    color          : black;
+    display        : block;
+    border         : none;
+    border-bottom  : lightgrey solid 1.5px;
+    background     : none;
+    width          : 100%;
+    text-align     : left;
+    cursor         : pointer;
+    outline        : none;
+}
+
+
+.dropdown-container {
+    display         : none;
+    padding-left: 30px;
+}
+
+.dropdown-container>p {
+    font-family: 'Roboto-Regular';
+
+}

@@ -30,16 +30,16 @@
         </nav>
     </header>
 
-    
-        <!-- Search bar -->
+
+    <!-- Search bar -->
     <div class="searchbar">
         <img class="searchpic" src="assets/Search.png" alt="search whatever you want here" width="40px" height="40px">
         <div class="search">
-            <input placeholder="living room" size="50%" />
+            <input placeholder="living room" />
             <span class="algolia">Powered by <b>Algolia</b> <img src="assets/Sajari Logo.png"
                     alt="Logo from sajari"></span>
         </div>
-        
+
         <!-- Order by -->
         <div class="orderby">
             <button class="dropbtn">Best match <span id="arrow"><i class="arrow down"></i></span></button>
@@ -51,40 +51,59 @@
         </div>
     </div>
 
-        <!-- Main Content : Filter, products -->
+    <!-- Main Content : Filter, products -->
 
-        <main>
+    <main>
         <!-- Filter box -->
         <div class="filterbox">
             <p>FILTER BY</p>
             <button class="dropdown-btn">Collection <span id="arrow"><i class="arrow down"></i></span></button>
-              <div class="dropdown-container">
-                <a href="#">Summer 2021</a>
-                <a href="#">Sales</a>
-                <a href="#">Beach House</a>
-                <a href="#">Cottage Living</a>
-              </div>
+            <div class="dropdown-container">
+                <p>• Summer 2021</p>
+                <p>• Sales</p>
+                <p>• Beach House</p>
+                <p>• Cottage Living</p>
+            </div>
 
             <button class="dropdown-btn">Color <span id="arrow"><i class="arrow down"></i></span></button>
-              <div class="dropdown-container">
-                <a href="#">Black</a>
-                <a href="#">White</a>
-                <a href="#">Beige</a>
-                <a href="#">Bordeaux</a>
-                <a href="#">Navy Blue</a>
-              </div>
-            
-            <button class="dropdown-btn">Category <span id="arrow"><i class="arrow down"></i></span></button>
-              <div class="dropdown-container">
-                <a href="#">Lounge</a>
-                <a href="#">Table & chairs</a>
-                <a href="#">Armchair</a>
-                <a href="#">Side Table</a>
-                <a href="#">Shelves</a>
-                <a href="#">Chair</a>
-              </div>
+            <div class="dropdown-container">
+                <p>• Black</p>
+                <p>• White</p>
+                <p>• Beige</p>
+                <p>• Bordeaux</p>
+                <p>• Navy Blue</p>
+            </div>
 
-            
+            <button class="dropdown-btn">Category <span id="arrow"><i class="arrow down"></i></span></button>
+            <div class="dropdown-container">
+                <p>• Lounge</li>
+                <p>• Table & chairs</p>
+                <p>• Armchair</p>
+                <p>• Side Table</p>
+                <p>• Shelves</p>
+                <p>• Chair</lp>
+            </div>
+
+
+            <script>
+                /* Js for the drop down */
+                var dropdown = document.getElementsByClassName("dropdown-btn");
+                var i;
+
+                for (i = 0; i < dropdown.length; i++) {
+                    dropdown[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var dropdownContent = this.nextElementSibling;
+                        if (dropdownContent.style.display === "block") {
+                            dropdownContent.style.display = "none";
+                        } else {
+                            dropdownContent.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+
+
         </div>
     </main>
 
