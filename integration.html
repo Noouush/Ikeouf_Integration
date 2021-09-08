@@ -8,6 +8,7 @@
     <link rel=stylesheet href=style.css>
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://kit.fontawesome.com/3cd74eac6b.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <title>Welcome to Ikeouf, best furniture shop in the world</title>
@@ -17,7 +18,7 @@
     <!-- Navbar -->
     <header>
         <nav>
-            <div class="menu"><img src="assets/Logo.png" alt="logo ikeouf"></div>
+            <div class="logo"><img src="assets/Logo.png" alt="logo ikeouf"></div>
             <div class="menu">
                 <p>HOME</p>
             </div>
@@ -27,10 +28,13 @@
             <div class="menu2">
                 <p>MAGAZINE</p>
             </div>
-            <div class="menu"><img src="assets/Cart Button.png" alt="show my cart"></div>
+            <div class="cart"><img src="assets/Cart Button.png" alt="show my cart"></div>
             <div class="menu">
                 <p>LOGIN</p>
             </div>
+            <button class="burger">
+                <i class="fas fa-bars"></i>
+            </button>  
         </nav>
     </header>
 
@@ -95,7 +99,6 @@
                 <input type="text" id="amount" readonly>
             </div>
 
-
             <script>
                 /* Js for the drop down */
                 var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -128,6 +131,17 @@
                         " - $" + $("#slider-range").slider("values", 1));
                 });
             </script>
+        </div>
+
+        <!-- Filterbox Responsive-->
+
+        <div class="respofilter">
+            <button class="dropbtn">Filters <span id="arrow"><i class="arrow down"></i></span></button>
+            <div class="dropdown-content">
+                <a href="#">Collection</a>
+                <a href="#">Color</a>
+                <a href="#">Category</a>
+            </div>
         </div>
 
         <!-- Products -->
