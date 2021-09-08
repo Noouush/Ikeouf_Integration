@@ -299,6 +299,10 @@ main {
   .respofilter {
     display: none;
   }
+
+  .burger {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -318,6 +322,8 @@ main {
     display: flex;
     flex-direction: column;
   }
+
+  /* Responsive search and filter */ 
 
   .algolia {
     display: none;
@@ -351,4 +357,46 @@ main {
     display: none;
   }
 
+  /* Responsive navbar */
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .burger {
+    grid-column: 4 / span 1;
+    grid-row: 1;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+    font-size: 25px;
+  }
+
+  .cart {
+    grid-column: 3 / span 1;
+    grid-row: 1;
+  }
+
+  .menu, .menu2 {
+    max-height: 0px;
+    
+  }
+
+  #home {
+    grid-row: 2;
+  }
+
+  #shop {
+    grid-row: 3;
+  }
+
+  .menu2 {
+    grid-row: 4;
+    grid-column: 1;
+  }
+
+  #login {
+    grid-row: 5;
+  }
 }
