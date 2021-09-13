@@ -379,8 +379,8 @@ main {
   }
 
   .menu, .menu2 {
-    max-height: 0px;
-    
+    /*max-height: 0px;*/
+    display: none;
   }
 
   #home {

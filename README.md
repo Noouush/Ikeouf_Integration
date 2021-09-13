@@ -35,10 +35,19 @@ I used some jQuery for the price range, even if it's recommended to not use jQue
 The grid system used do not has grid template area, because it didn't worked on my solo project, even if it worked on my group project. I didn't understand why, and I put my code on the W3C Validator, which told me everthing was good.
 So no grid-template-areas, but grid-template-columns and rows.
 
+![w3CValidator](http://jigsaw.w3.org/css-validator/images/vcss-blue)
+
 
 ### Responsive
 
-We also had to insure that our project would be responsive. I worked on it but
+We also had to insure that our project would be responsive. I worked on it but I had a few issues. I succeeded to make my project responsive on almost all the website, except the menu, where i couldn't manage to put a burger menu with an opening menu tab. Visually, the menu is good, but the nav doesn't work, we only have the burger icon. It's something I can rework with JS onclick, and I'll rework it later.
+
+### Screenshots
+
+You can se the screenshots of my work on the "screenshots" directory. It's called "MyWork1" and "MyWork2".
 
 
-![w3CValidator](http://jigsaw.w3.org/css-validator/images/vcss-blue)
+
+> Thanks for watching this project ! 
+
+
